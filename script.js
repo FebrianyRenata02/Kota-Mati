@@ -115,7 +115,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 const hero = el("section", "hero", {
     id: "home-section"
 });
-hero.style.backgroundImage = "url('/asset/Banner_Server_KM_by_Len-4.gif')";
+hero.style.backgroundImage = "url('/asset/banner.png')";
 
 // Logo besar KM
 const heroLogoWrap = el("div", "hero-logo-wrap");
