@@ -57,10 +57,13 @@ for (const txt in menuMap) {
 const navRight = el("div", "nav-right");
 
 // Discord Icon (FontAwesome)
-const discordBtn = el("div", "discord-btn", {
+const discordBtn = el("a", "discord-btn", {
+    // 2. Masukkan link Discord Anda di sini
+    href: "https://discord.gg/PDmjcGeHQ9",
+    // 3. (Opsional) Tambahkan target="_blank" agar link terbuka di tab baru
+    target: "_blank",
     html: '<i class="fa-brands fa-discord"></i>'
 });
-navRight.appendChild(discordBtn);
 
 // Hamburger Button 
 const hamBtn = el("div", "hamburger");
