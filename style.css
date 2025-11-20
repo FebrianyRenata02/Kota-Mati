@@ -95,6 +95,7 @@ img {
   font-size: 18px;
   color: white;
   transition: 0.25s ease;
+  text-decoration: none;
 }
 
 .discord-btn:hover {
