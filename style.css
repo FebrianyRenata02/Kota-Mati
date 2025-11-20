@@ -1,0 +1,560 @@
+/* --------------------------------------------------
+   GLOBAL RESET & FONT
+-------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Custom Selection Color (Red KM) */
+::selection {
+  background: #982424;
+  color: #fff;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #000;
+  border-bottom: 1px solid #982424;
+}
+
+/* LEFT (LOGO) */
+.nav-left .logo-img {
+  width: 80px;
+  height: auto;
+}
+
+/* CENTER MENU (Menu Desktop) */
+.nav-center {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #982424;
+}
+
+/* RIGHT (DISCORD + HAMBURGER) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* DISCORD BUTTON */
+.discord-btn {
+  width: 36px;
+  height: 36px;
+  background: #ffffff12;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.discord-btn i {
+  font-size: 18px;
+  color: white;
+  transition: 0.25s ease;
+}
+
+.discord-btn:hover {
+  background: #5865f240;
+}
+
+.discord-btn:hover i {
+  color: #5865f2;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none; /* Sembunyikan di desktop */
+  cursor: pointer;
+  z-index: 60;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Hamburger Active State */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background: #111;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: right 0.3s ease-in-out;
+  z-index: 55;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-link {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+   HERO (GAMBAR BESAR)
+-------------------------------------------------- */
+.hero {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  filter: brightness(0.9);
+}
+
+.hero-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero-logo-img {
+  width: 280px;
+  height: auto;
+  margin: -30px 0;
+}
+
+.logo-text-top,
+.logo-text-bottom {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.logo-text-top {
+  margin-bottom: 5px;
+}
+.logo-text-bottom {
+  margin-top: 5px;
+}
+
+/* --------------------------------------------------
+   MAIN CONTENT WRAPPER
+-------------------------------------------------- */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #000;
+  padding: 70px 40px;
+}
+
+/* --------------------------------------------------
+   SECTION GENERIC (ABOUT, GALLERY, GAME)
+-------------------------------------------------- */
+.section {
+  margin-bottom: 80px;
+  text-align: center;
+  /* Atur padding virtual agar konten tidak tertutup sticky navbar */
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  padding: 5rem;
+  font-size: 38px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #982424;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #d43b3b;
+}
+
+/* --------------------------------------------------
+   SLIDER BASE
+-------------------------------------------------- */
+.slider-section {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-outer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* Padding untuk menempatkan panah di desktop/tablet */
+  padding: 0 60px;
+}
+
+.slider-track {
+  display: flex;
+  transition: 0.4s ease;
+  width: 100%;
+}
+
+.slide-item {
+  min-width: 260px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.slide-item:hover {
+  transform: scale(1.03);
+}
+
+.slide-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------
+   SLIDER ARROWS (Desktop Default)
+-------------------------------------------------- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: #982424;
+  border: none;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  background: #d43b3b;
+}
+
+.arrow-left {
+  left: 5px;
+}
+
+.arrow-right {
+  right: 5px;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+.site-footer {
+  width: 100%;
+  padding: 50px 40px;
+  background: #111;
+  border-top: 1px solid #222;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.footer-name h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.footer-right h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links li {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #982424;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+-------------------------------------------------- */
+
+/* Tablet & Smaller Desktop (Max Width 900px) */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .section {
+    scroll-margin-top: 70px; /* Tablet Scroll Fix */
+  }
+
+  .nav-center {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-logo-img {
+    width: 220px;
+  }
+
+  .logo-text-top,
+  .logo-text-bottom {
+    font-size: 28px;
+  }
+
+  .content {
+    padding: 50px 30px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  /* SLIDER TABLET */
+  .slider-outer {
+    padding: 0 45px;
+  }
+
+  .arrow-left {
+    left: 0px;
+  }
+
+  .arrow-right {
+    right: 0px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
+
+/* Mobile (Max Width 650px) */
+@media (max-width: 650px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .section {
+    scroll-margin-top: 60px; /* Mobile Scroll Fix */
+  }
+
+  /* Tampilan Mobile */
+  .nav-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-logo-img {
+    width: 180px;
+    margin: -20px 0;
+  }
+
+  .logo-text-top,
+  .logo-text-bottom {
+    font-size: 22px;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  /* SLIDER MOBILE */
+  .slider-outer {
+    padding: 0 10px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+
+  .slide-item {
+    min-width: 100%;
+    margin-right: 0;
+  }
+
+  .arrow {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    top: 50%;
+  }
+
+  .arrow-left {
+    left: 0px;
+  }
+
+  .arrow-right {
+    right: 0px;
+  }
+
+  .footer-left {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    width: 45px;
+  }
+
+  .footer-name h3 {
+    font-size: 22px;
+  }
+}

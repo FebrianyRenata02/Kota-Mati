@@ -1,0 +1,126 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Georgia, serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  border-bottom: 1px solid #a20000;
+  z-index: 999;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-logo {
+  position: absolute;
+  left: 10px;
+  color: #a20000;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 50px;
+  width: 100%;
+  height: 250px;
+  background: url("/mnt/data/Screen Shot 2025-11-20 at 17.16.45.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== OUR TEAM MAIN WRAPPER ===== */
+.our-team-section {
+  width: 100%;
+  background: #000;
+  padding-bottom: 40px;
+}
+
+/* ===== CHEVRON WRAPPER ===== */
+.chevron-container {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  position: relative;
+}
+
+.chevron-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== TEXT POSITIONS ===== */
+.chev-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.chev-title {
+  font-weight: bold;
+  font-size: 20px;
+  top: 35px;
+  position: absolute;
+  width: 100%;
+}
+
+.chev-role {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.left-role,
+.right-role {
+  position: absolute;
+  font-weight: bold;
+  font-size: 16px;
+  width: 40%;
+}
+
+.left-role {
+  left: 10px;
+  text-align: left;
+}
+.right-role {
+  right: 10px;
+  text-align: right;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  width: 100%;
+  background: #0a0a0a;
+  padding: 30px 20px;
+  color: #ddd;
+}
+
+.footer-logo {
+  color: #a20000;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
