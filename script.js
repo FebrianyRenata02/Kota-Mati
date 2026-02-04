@@ -121,7 +121,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 const hero = el("section", "hero", {
     id: "home-section"
 });
-hero.style.backgroundImage = "url('/asset/banner.png')";
+hero.style.backgroundImage = "url(https://raw.githubusercontent.com/FebrianyRenata02/Kota-Mati/refs/heads/main/asset/Kota%20Mati.jpg)";
 
 // Logo besar KM
 const heroLogoWrap = el("div", "hero-logo-wrap");
