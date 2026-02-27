@@ -165,7 +165,7 @@ aboutText.textContent = `An active Indonesian Community Server One place to find
 
 // Tombol Our Team sebagai hyperlink ke halaman baru
 const teamBtn = el("a", "btn team-btn", {
-    href: "/our_team.html",
+    href: "#",
     target: "_blank"
 });
 teamBtn.textContent = "Our Team";
