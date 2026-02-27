@@ -161,7 +161,7 @@ const aboutTitle = el("h2", "section-title");
 aboutTitle.textContent = "About";
 
 const aboutText = el("p", "section-text");
-aboutText.textContent = `An active Indonesian Comunity Server One place to finding a new friend & Gamming Fun`;
+aboutText.textContent = `An active Indonesian Community Server One place to finding a new friend & Gamming Fun`;
 
 // Tombol Our Team sebagai hyperlink ke halaman baru
 const teamBtn = el("a", "btn team-btn", {
